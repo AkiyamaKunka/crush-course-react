@@ -5,9 +5,14 @@ import NewExpense from "../NewExpense/NewExpense";
 import Card from '../UI/Card';
 
 function Expenses(props) {
+    const createExpenseObject = (expenseObject) => {
+        console.log(expenseObject);
+
+    }
+
     return (
         <Card className='expenses'>
-            <NewExpense/>
+            <NewExpense onCreateExpenseObject={createExpenseObject}/>
 
             <ExpenseItem item={props.item[0]}/>
             <ExpenseItem item={props.item[1]}/>

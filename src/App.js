@@ -51,7 +51,7 @@ function App() {
             <h2>
                 Let's get started!
             </h2>
-            <Expenses item={expenses}/>
+            <Expenses item={expenses} onCreateExpenseObject1/>
 
             {/*<ExpenseItem*/}
             {/*    title={expenses[0].title}*/}
