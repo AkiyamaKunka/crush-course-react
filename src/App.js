@@ -30,6 +30,11 @@ function App() {
     ];
 
 
+    const createExpenseHandler = (expenseObject) => {
+        console.log(expenseObject);
+    };
+
+
     return (
         // <div className="App">
         //   <header className="App-header">
@@ -51,7 +56,7 @@ function App() {
             <h2>
                 Let's get started!
             </h2>
-            <Expenses item={expenses} onCreateExpenseObject1/>
+            <Expenses item={expenses} onCreateExpense={createExpenseHandler}/>
 
             {/*<ExpenseItem*/}
             {/*    title={expenses[0].title}*/}
