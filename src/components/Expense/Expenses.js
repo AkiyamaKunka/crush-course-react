@@ -11,6 +11,7 @@ function Expenses(props) {
     const [filteredYear, setFilteredYear] = useState('2020');
     const createExpense = (expenseObject) => {
         props.onCreateExpense(expenseObject);
+
     }
     const selectedYearHandler = (selectedYear) => {
         setFilteredYear(selectedYear);
@@ -21,12 +22,10 @@ function Expenses(props) {
             <NewExpense onCreateExpense={createExpense} selected={filteredYear}/>
             <Card className='expenses'>
                 <ExpensesFilter onSelectedYear={selectedYearHandler}/>
-                <ExpenseItem item={props.item[0]}/>
-                <ExpenseItem item={props.item[1]}/>
-                <ExpenseItem item={props.item[2]}/>
-                <ExpenseItem item={props.item[3]}/>
+                {props.item.map((expense) => <ExpenseItem key={expense.id} item={expense}/>)}
             </Card>
         </div>
     );
 }
+
 export default Expenses;
