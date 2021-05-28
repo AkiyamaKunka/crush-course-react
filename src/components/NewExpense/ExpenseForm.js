@@ -20,11 +20,6 @@ const ExpenseForm = (props) => {
         setEnteredAmount('');
         setEnteredDate('');
     };
-    const returnPreviewHandler = () => {
-        // return to preview page of form
-        props.onReturnPreview();
-    }
-
 
     return (
         <form onSubmit={submitHandler}>
@@ -63,7 +58,7 @@ const ExpenseForm = (props) => {
             </div>
             <br/>
             <div className='new-expense__actions'>
-                <button onClick={returnPreviewHandler}>Cancel</button>
+                <button onClick={props.onReturnPreview} type='button'>Cancel</button>
             </div>
         </form>
     );
