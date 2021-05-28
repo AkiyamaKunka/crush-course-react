@@ -9,11 +9,18 @@ const NewExpense = (props) => {
         };
         props.onCreateExpense(expenseObject);
     };
+    const returnPreviewHandler = () => {
+        props.onReturnPreview();
+    }
     return (
         <div className='new-expense'>
-            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}/>
+            <ExpenseForm
+                onSaveExpenseData={saveExpenseDataHandler}
+                onReturnPreview={returnPreviewHandler}/>
         </div>
     );
+
+
 };
 
 export default NewExpense;
