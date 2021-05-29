@@ -21,9 +21,9 @@ function Expenses(props) {
     );
     return (
         <div>
-            <NewExpense onCreateExpense={createExpense}
-                        selected={filteredYear}/>
             <Card className='expenses'>
+                <NewExpense onCreateExpense={createExpense}
+                            selected={filteredYear}/>
                 <ExpensesChart expenses={filteredExpenses}/>
                 <ExpensesFilter onSelectedYear={selectedYearHandler}/>
                 <ExpensesList item={filteredExpenses}/>
